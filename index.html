@@ -245,7 +245,7 @@
           <div class="box">
             <div class="inner-box">
               <div class="input-style">
-                <div class="radio">
+                <div class="radio" id="pledge2">
                   <input type="radio" style="height:17px; width:17px; margin-right: 15px;">
                 </div>
                 <div>
@@ -270,7 +270,7 @@
                 </div>
               </div>
             </div>
-            <div class="pledge">
+            <div class="pledge2">
               <div class="pledge-styles">
                 <div>
                   <p>Enter your pledge</p>
@@ -278,7 +278,7 @@
                 <div class="plegde-right">
                   <span class="currencyinput">$</span>
                     <input type="number"name="currency">
-                  <button class="btn support">Continue</button>
+                  <button class="btn" id="btn2">Continue</button>
                 </div>
               </div>
             </div>
@@ -286,7 +286,7 @@
           <div class="box">
             <div class="inner-box opaque">
               <div class="input-style">
-                <div class="radio">
+                <div class="radio" id="pledge3">
                   <input type="radio" style="height:17px; width:17px; margin-right: 15px;">
                 </div>
                 <div>
@@ -311,7 +311,7 @@
                 </div>
               </div>
             </div>
-            <div class="pledge">
+            <div class="pledge3">
               <div class="pledge-styles">
                 <div>
                   <p>Enter your pledge</p>
@@ -319,7 +319,7 @@
                 <div class="plegde-right">
                   <span class="currencyinput">$</span>
                     <input type="number">
-                  <button class="btn ">Continue</button>
+                  <button class="btn" id="btn3">Continue</button>
                 </div>  
               </div>
             </div>
@@ -384,6 +384,12 @@
     const mobileMenu = document.querySelector('#mobile-menu');
     const menuModal = document.querySelector('.menu-modal')
     const menuClose = document.querySelector('#menu-close')
+    const secondPledge = document.querySelector('#pledge2')
+    const secondClassPledge = document.querySelector('.pledge2')
+    const thirdPledge = document.querySelector('#pledge3')
+    const thirdClassPledge = document.querySelector('.pledge3')
+    const secondContinueBtn = document.querySelector('#btn2')
+    const thirdContinueBtn = document.querySelector('#btn3')
 
     function toggleModal() {
       modal.classList.toggle("modalBlock");
@@ -392,6 +398,14 @@
 
   function togglePledge() {
     pledgeClass.classList.toggle('pledgeblock');
+  }
+
+  function toggleSecondPledge() {
+    secondClassPledge.classList.toggle('pledgeblock2');
+  }
+
+  function toggleThirdPledge() {
+    thirdClassPledge.classList.toggle('pledgeblock3');
   }
   
   function toggleBookmark() {
@@ -402,7 +416,6 @@
   function toggleSupport() {
     toggleModal();
     modal2.classList.toggle('supportBlock');
-    console.log('am agirl')
   }
 
   function toggleMenu() {
@@ -414,7 +427,11 @@
   leftBtn.addEventListener('click', toggleModal);
   modalClose.addEventListener('click', toggleModal);
   pledge.addEventListener('click', togglePledge);
+  secondPledge.addEventListener('click', toggleSecondPledge);
+  thirdPledge.addEventListener('click', toggleThirdPledge);
   continueBtn.addEventListener('click', toggleSupport)
+  secondContinueBtn.addEventListener('click', toggleSupport)
+  thirdContinueBtn.addEventListener('click', toggleSupport)
   bookmark.addEventListener('click', toggleBookmark)
   supportClose.addEventListener('click', toggleSupport)
   mobileMenu.addEventListener('click', toggleMenu)

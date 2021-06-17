@@ -388,6 +388,27 @@ main section .container3 .paragraph-box {
     display: block;
 }
 
+.pledge2{
+    display: none;
+    border-top: 1px solid var(--Dark-gray);
+    margin: 20px 0;
+}
+
+
+.pledgeblock2{
+    display: block;
+}
+
+.pledge3{
+    display: none;
+    border-top: 1px solid var(--Dark-gray);
+    margin: 20px 0;
+}
+
+
+.pledgeblock3{
+    display: block;
+}
 .pledge-styles{
     display: flex;
     width: 100%;
