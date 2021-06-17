@@ -617,9 +617,12 @@ input[type=number]:focus{
         margin-left: 50px;
     }
 
-
-
-    
-    
-
 }
+
+@media (max-width:400px) {
+
+    .modal1-box{
+        max-width: 300px;
+    }
+}
+
